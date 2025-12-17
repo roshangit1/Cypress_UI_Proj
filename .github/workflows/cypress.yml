@@ -36,7 +36,5 @@ jobs:
           path: /home/runner/.npm/_logs/*.log
 
       - name: Run Cypress Tests
-        uses: cypress-io/github-action@v5
-        with:
-          build: npm run build # optional, if you have a build step
-          start: npm start    # optional, if testing a local server
+        run: npx cypress run
+
